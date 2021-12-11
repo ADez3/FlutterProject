@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fluttermasterproject/theme/colors.dart';
 import 'package:fluttermasterproject/widgets/app_large_text.dart';
 
 class IntroductionPage extends StatefulWidget {
@@ -39,15 +40,16 @@ class _IntroductionPageState extends State<IntroductionPage> {
                 ),
               ),
               child: Container(
-                margin: const EdgeInsets.only(top: 150,left: 20,right: 20),
+                margin: const EdgeInsets.only(top: 120,left: 20,right: 20),
                 child: Row(
                   // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: const [
                         AppLargeText(text: 'Trips'),
-                        AppMText(text: 'Discover'),
+                        AppMText(text: 'Mountain',color: AppColors.textColor2,),
+                        SizedBox(height: 15,),
                         SizedBox(
                           width: 250,
                           child: AppText(
