@@ -62,29 +62,27 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         const SizedBox(
           height: 20,
         ),
-        Container(
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: TabBar(
-              indicator: CircleIndicator(color: AppColors.mainColor, radius: 5),
-              labelPadding: const EdgeInsets.only(left: 15, right: 15),
-              padding: const EdgeInsets.only(left: 20, right: 25),
-              controller: _tabController,
-              labelColor: Colors.black,
-              unselectedLabelColor: Colors.grey,
-              isScrollable: true,
-              tabs: const [
-                Tab(
-                  text: 'Places',
-                ),
-                Tab(
-                  text: 'Inspiration',
-                ),
-                Tab(
-                  text: 'Emotions',
-                ),
-              ],
-            ),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: TabBar(
+            indicator: const CircleIndicator(color: AppColors.mainColor, radius: 5),
+            labelPadding: const EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 20, right: 25),
+            controller: _tabController,
+            labelColor: Colors.black,
+            unselectedLabelColor: Colors.grey,
+            isScrollable: true,
+            tabs: const [
+              Tab(
+                text: 'Places',
+              ),
+              Tab(
+                text: 'Inspiration',
+              ),
+              Tab(
+                text: 'Emotions',
+              ),
+            ],
           ),
         ),
         Container(
@@ -148,7 +146,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         const SizedBox(
           height: 20,
         ),
-        Container(
+        SizedBox(
           height: 100,
           width: double.maxFinite,
           // margin: const EdgeInsets.only(left: 10),
@@ -195,9 +193,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
 class CircleIndicator extends Decoration {
   final Color color;
-  double radius;
+  final double radius;
 
-  CircleIndicator({required this.color, required this.radius});
+  const CircleIndicator({required this.color, required this.radius});
 
   @override
   BoxPainter createBoxPainter([VoidCallback? onChanged]) {
