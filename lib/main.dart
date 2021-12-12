@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter/services.dart';
 import 'package:fluttermasterproject/screens/introduction_page.dart';
+import 'package:fluttermasterproject/screens/mainpages/main_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: IntroductionPage(),
+      home: MainPage(),
     );
   }
 }
