@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttermasterproject/screens/detail_page.dart';
 // import 'package:flutter/services.dart';
 import 'package:fluttermasterproject/screens/introduction_page.dart';
 import 'package:fluttermasterproject/screens/mainpages/main_page.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MainPage(),
+      home: DetailPage(),
     );
   }
 }
