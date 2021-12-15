@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttermasterproject/iconsProvider/my_icons_icons.dart';
+import 'package:fluttermasterproject/widgets/app_large_text.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({Key? key}) : super(key: key);
@@ -56,6 +57,7 @@ class _DetailPageState extends State<DetailPage> {
             Positioned(
               top: 330,
               child: Container(
+                padding: EdgeInsets.only(left: 25,right: 25,top: 25),
                 width: MediaQuery.of(context).size.width,
                 height: 500,
                 decoration: const BoxDecoration(
@@ -64,6 +66,39 @@ class _DetailPageState extends State<DetailPage> {
                     topLeft: Radius.circular(30),
                   ),
                   color: Colors.white,
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        AppLargeText(text: 'Yosemite',size: 25,),
+                        Text('\$ 250',style :TextStyle(color: Colors.purple,fontSize: 25,)),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      children: const [
+                        Icon(MyIcons.location_marker,color: Colors.purple,size: 15,),
+                        SizedBox(width: 5,),
+                        AppText(text: 'USA, California',size: 12,),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        Icon(MyIcons.star,color: Colors.green,),
+                        Icon(MyIcons.star,color: Colors.green,),
+                        Icon(MyIcons.star,color: Colors.green,),
+                        Icon(MyIcons.star,color: Colors.green,),
+                        Icon(MyIcons.star),
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ),
